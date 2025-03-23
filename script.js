@@ -27,11 +27,11 @@ const codes = {
 };
 
 document.getElementById('submitCode').addEventListener('click', () => {
-    const code = document.getElementById('codeInput').value;
+    const code = document.getElementById('codeInput').value.trim(); // Elimina espacios en blanco
 
     if (codes[code]) {
         window.location.href = codes[code]; // Redirige al enlace correspondiente
     } else {
-        alert('Código no válido');
+        alert('Código no válido'); // Muestra un mensaje si el código no es válido
     }
 });
