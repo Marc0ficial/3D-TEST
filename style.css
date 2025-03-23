@@ -1,3 +1,4 @@
+/* Estilos globales */
 * {
     margin: 0;
     padding: 0;
@@ -15,10 +16,69 @@ body {
     overflow: hidden; /* Evita el scroll innecesario */
 }
 
+/* Barra lateral */
+#sidebar {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 20px;
+    box-shadow: none; /* Elimina la sombra si no la necesitas */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0; /* Mueve la barra al fondo */
+    left: 0;
+    height: auto; /* Ajusta la altura automáticamente */
+    z-index: 10;
+    background-color: transparent !important; /* Asegura que el fondo sea transparente */
+    border: none; /* Elimina cualquier borde */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+#sidebar h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white; /* Asegura que el texto sea blanco */
+}
+
+#sidebar input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    color: white; /* Texto blanco */
+}
+
+#sidebar input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Color del texto del placeholder */
+}
+
+#sidebar button {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sidebar button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al pasar el mouse */
+}
+
+/* Contenedor principal */
+#main {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Escena del cubo 3D */
 .scene {
-    width: 200px;
+    width: 200px; /* Ajusta el tamaño del cubo */
     height: 200px;
-    perspective: 800px;
+    perspective: 800px; /* Añade perspectiva para el efecto 3D */
 }
 
 .cube {
@@ -27,14 +87,14 @@ body {
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(-20deg) rotateY(30deg);
-    animation: spin 6s infinite linear;
+    animation: spin 6s infinite linear; /* Animación de rotación */
 }
 
 .face {
     position: absolute;
     width: 200px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
     border: 2px solid white;
     display: flex;
     justify-content: center;
@@ -57,7 +117,7 @@ body {
     }
 }
 
-/* FPS Counter */
+/* Contador de FPS */
 .fps-counter {
     position: absolute;
     top: 10px;
