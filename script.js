@@ -22,7 +22,8 @@ updateFPS(); // Inicia el contador de FPS
 
 // Lógica para manejar los códigos de la barra lateral
 const codes = {
-    '2342': 'https://www.youtube.com/watch?v=spDfGcoWw8k', // Ejemplo de código válido
+    '2342': 'https://www.youtube.com/watch?v=spDfGcoWw8k',
+    '0511': 'https://marcthefennec.github.io/WEBISTEXD/', // Ejemplo de código válido
     '1234': 'https://www.youtube.com/watch?v=Tz5ldNRjQkE'  // Otro ejemplo
 };
 
